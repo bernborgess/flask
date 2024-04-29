@@ -123,7 +123,7 @@ class FlaskClient(Client):
     application: Flask
 
     def __init__(self, *args: t.Any, **kwargs: t.Any) -> None:
-        super().__init__(*args, **kwargs)
+        # super().__init__(*args, **kwargs)
         self.preserve_context = False
         self._new_contexts: list[t.ContextManager[t.Any]] = []
         self._context_stack = ExitStack()
